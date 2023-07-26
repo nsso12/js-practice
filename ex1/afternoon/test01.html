@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 공부해보자</title>
+    <script>
+
+        //오름차순
+        //선언부 건드리지 말 것
+        // var a = 5;
+        // var b = 8;
+        // var c = 3;
+
+        // if (a > b)
+        //     [a, b] = [b, a];
+        // if (a > c)
+        //     [a, c] = [c, a];
+        // if (b > c)
+        //     [b, c] = [c, b];
+
+        // // //출력부는 건드리지 말 것
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+
+        // console.log("====================================================");
+
+
+        // // var age = window.prompt("나이를 입력하세요");   
+        // // 자바스크립트 기능이 아니고 윈도우에서 지원하는 기능
+        // // age = age || 0;
+
+        // // if (age > 30)
+        // //     console.log("젋으시네요");
+        // // else
+        // //     console.log("더 젋으시네요");
+
+
+        // console.log("====================================================");
+
+
+        // // 차이름 배열
+        // // 원하시는 차 이름으로 배열은 1개고 안에 차가 3개 문자열로
+        // // 콘솔로 찍기
+
+        // Cars = ["붕붕이", "부릉이", "빵빵이"];
+        // console.log(Cars);
+        // // 자료형 선언. 해줘야 하는가?
+
+
+        // console.log("====================================================");
+
+
+        // //객체, 오브젝트 를 JSON 방식으로 만들어주시는데
+        // //id는 1 2 3 4 5
+        // //name은 가 나 다 라 마
+
+        // //key(id) 만 출력되는지 보시고
+        // //value (=name)만 출력되는지 console.
+
+        // var object = [
+        //     { "id": 1, "name": "가" },
+        //     { "id": 2, "name": "나" },
+        //     { "id": 3, "name": "다" },
+        //     { "id": 4, "name": "라" },
+        //     { "id": 5, "name": "마" }
+        // ]
+
+        // console.log(object);            // 전체 출력
+        // console.log(object[0]);         // {id: 1, name: '가'}
+        // console.log(object[0].id);      // 1 
+
+
+
+        // //내림차순
+        // //선언부 건드리지 말 것
+        // var a = 5;
+        // var b = 8;
+        // var c = 3;
+
+        // // 1. 조건문 풀이
+        // if (a < b)
+        //     [a, b] = [b, a];
+        // if (a < c)
+        //     [a, c] = [c, a];
+        // if (b < c)
+        //     [b, c] = [c, b];
+
+
+        // // 2. 배열 사용 풀이
+        // var arr = [5, 8, 3];
+        // arr.sort((a, b) => b - a);
+        // console.log(arr);
+
+
+        // //출력부는 건드리지 말 것
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+
+
+        // // 내가 내보는 문제
+
+        // // 일주일은 월,화,수,목,금으로 이루어져 있습니다!
+        // // 요일의 한글 이름을 입력하면 console에 영어 이름을 출력해주세요
+
+
+        // // 1. 
+        // // var week = [
+        // //     { "kr": "월요일", "en": "Monday" },
+        // //     { "kr": "화요일", "en": "Tuesday" },
+        // //     { "kr": "수요일", "en": "Wednesday" },
+        // //     { "kr": "목요일", "en": "Thursday" },
+        // //     { "kr": "금요일", "en": "Friday" },
+        // //     { "kr": "토요일", "en": "Saturday" },
+        // //     { "kr": "일요일", "en": "Sunday" }
+        // // ]
+
+
+        // // console.log(week);            // 전체 출력
+        // // console.log(week[0].en);         // {id: 1, name: '가'}
+
+
+        // 2. 소현 문제 ----------------------------------------------------
+        // var week 라는 변수 선언 및 객체 할당 (key, value 사용)
+        var week = {
+            "월요일": "Monday",
+            "화요일": "Tuesday",
+            "수요일": "Wednesday",
+            "목요일": "Thursday",
+            "금요일": "Friday",
+            "토요일": "Saturday",
+            "일요일": "Sunday"
+        };
+
+        // prompt()함수를 사용해 요일 이름을 입력받고 
+        // 입력받은 요일을 change 변수에 할당
+        var change = prompt("요일의 이름을 입력하세요");
+
+        // change 변수에 저장된 입력값을 사용하여 week 객체에서 
+        // 해당하는 요일의 영어명을 가져오고 console.log() 함수를 통해 출력 
+        console.log(week[change]);
+
+        // 이때 {} 중괄호로 객체를 정의하고, 속성에 접근할 때는 객체이름.속성이름 혹은 객체이름['속성이름']의 형태를 사용
+        // 따라서 weeks[input]는 사용자가 입력한 요일에 해당하는 영문 요일 이름을 가져옴
+
+
+        // // 3. 지은언니 문제 ---------------------------------------
+        // // array data structure
+        // // array manipulation
+        // // 다음은 우리반의 수강시작일 입니다. 
+        // // splice를 이용해서 오늘 날짜(yyyymmdd)로 변경하세요.
+
+        // var nums = new Array(2, 0, 2, 3, 0, 5, 3, 0); // yyyymmdd _ 년,월,일
+        // console.log(nums);
+
+        // nums.splice(5, 3, 7, 1, 7);
+        // console.log(nums);
+
+
+        // // 4. 인기님 문제 -----------------------------------------
+        // var num = window.prompt("정수를 입력하세요");
+        // result = "";
+        // for (var i = 1; i <= num; i++) {
+        //     for (var j = 0; j < i; j++)
+        //         result += ("*");
+        //     result += "\n";
+        // }
+        // console.log(result);
+
+
+
+        // 5. 양백성 문제 ----------------------------------------
+        // var value;
+
+        // console.log(value == null);       // 박스에 들어있는 값을 비교하는 연산자
+        // console.log(value === null);      // 박스가 같은지를 비교하는 연산
+        // //답: true, false
+
+        // console.log("가" > "나");         // 뒤로 갈수록 값이 큼
+        // //답: false
+
+        // console.log("A" > "1");          // 아스키코드 값으로 비교하기에 65 > 1이 맞음
+        // //답: true
+
+        // console.log("A07" < "A15");
+        // //답: true
+
+
+        // 6. 기혁오빠 문제 
+        //격력을 기준으로 유닛정보를 오름차순(작은값에서 큰값)으로 나열하시오. 
+        //만약 공격력이 같으면, 이름을 기준으로 오름차순 나열하시오.
+
+        var protoss = [
+        { name: "질럿", power: 10, armor: 100 },
+        { name: "드라군", power: 10, armor: 20 },
+        { name: "캐리어", power: 12, armor: 11 },
+        { name: "프로브", power: 50, armor: 100 },
+        { name: "다크템플러", power: 5, armor: 1 },
+      ];
+      
+
+      for (var i = 0; i < protoss.length - 1; i++) {
+        for (var j = 0; j < protoss.length - 1 - i; j++) {
+          if (protoss[j].power > protoss[1 + j].power) {
+            var temp = protoss[j];
+            protoss[j] = protoss[1 + j];
+            protoss[1 + j] = temp;
+
+          } else if (
+            protoss[j].power == protoss[1 + j].power &&
+            protoss[j].name > protoss[1 + j].name
+          ) {
+            var temp = protoss[j];
+            protoss[j] = protoss[1 + j];
+            protoss[1 + j] = temp;
+          }
+        }
+      }
+
+      console.log(protoss);
+
+
+        // 2조 문제
+        // 2-1. 다음과 같이 주어진 배열에 대해서, for 루프와 if 조건문을 사용하여 배열 내의 모든 짝수를 출력하세요.
+        // var numbers = [3, 14, 18, 23, 28, 37, 42, 59, 61, 77];
+
+        // for (i = 0; i < numbers.length; i++) {
+        //     if (numbers[i] % 2 == 0)
+        //         console.log(numbers[i])
+        // }
+
+        // // 2-2. 
+        // var a = 18;
+        // console.log(typeof (a));        // Object가 나올줄 알았는데 number
+
+
+        // var arr = [10, 30, 60];
+        // console.log(typeof (arr));      // Object 
+
+        // var x = null;
+        // console.log(typeof (x));        // Object
+
+        // var a = "Ferrari,Lamborghini,Porsche";
+        // console.log(typeof (a));        // String
+
+
+        // var x = [1, 2, 3, 4, 5];
+        // x.push(1);
+        // x.push(new Array(1, 2, 3));
+        // x.splice(3, 4, 5, 6, 7);
+        // console.log(x);
+
+
+        // var nums = [5, 10, 21, "hello", [2, 3, 4]];
+        // console.log(typeof (nums));
+
+
+
+        // // 2-3.
+        // var nums = new Array(3, 15, "yo", new Array("hi", "hello", "quiz"));
+        // console.log(nums[2]);           // yo
+        // console.log(nums[3][2]);        // quiz
+
+        // var q1 = '하나' && '가나' && 'GANA' || 'ONE';
+        // console.log(q1);                // GANA
+        // // &&와 ||가 함께 사용되는 경우 우선순위는 &&가 ||보다 높음
+        // // && 연산자가 먼저 평가되고, 그 다음에 || 연산자가 평가됨              
+
+        // var q2 = '하나' && '가나' && 0 || 0n && 'ONE' && 'GANA';
+        // console.log(q2);                // 0n
+
+        // 숫자 5를 500으로 수정하기.
+        var nums = new Array(1, 3, 5, 7, 9);
+        nums.splice(2, 1, 500);
+        console.log(nums);
+
+        // 2-4. 태호, 한얼
+
+
+        // 3조
+        // 3-1
+        var exam = { kor: 10, "eng": 30, "ma th": 90 }
+        console.log(exam["ma th"]);
+
+
+        // 3-2
+        if(-1 || 0) alert('first');             // 실행
+        if(-1 && 0) alert('second');            // 실행 안됨   0이 false니까
+        if(null || -1 && 1) alert('third');     // 실행
+
+        
+        // 1-1 
+        //몸풀기 문제  : 메뉴를 가격이 낮은것부터 높은것 순으로 정렬하세요.
+        //( 단,가격이 동일한 경우 메뉴명의 이름 순으로 정렬하시오.)
+
+        var menu = [
+        { name: "참치김밥", price: 4000 },
+        { name: "멸치김밥", price: 4000 },
+        { name: "야채김밥", price: 3000 },
+        { name: "라면", price: 2500 },
+        { name: "고구마치즈돈까스", price: 8000 },
+        { name: "제육볶음", price: 8000 },
+        { name: "오징어덮밥", price: 8000 },
+        { name: "뚝불", price: 9000 },
+        { name: "냉모밀돈까스", price: 9000 },
+        { name: "꽁치김치찌개", price: 7000 },
+        { name: "순두부찌개", price: 7000 }
+      ];
+
+      /* for (var i = 0; i < ob.length - 1; i++) {
+        for (var j = 0; j < ob.length - 1 - i; j++) {
+          if (ob[j].price > ob[1 + j].price) {
+            var temp = ob[j];
+            ob[j] = ob[1 + j];
+            ob[1 + j] = temp;
+          } else if (
+            ob[j].price == ob[1 + j].price &&
+            ob[j].name > ob[1 + j].name
+          ) {
+            var temp = ob[j];
+            ob[j] = ob[1 + j];
+            ob[1 + j] = temp;
+          }
+        }
+      }
+      console.log(ob); */
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>

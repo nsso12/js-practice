@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 버튼을 누르면 안녕하세요를 출력하세요 -->
+    <script>
+        window.addEventListener("load", function () {
+            var body = document.querySelector("#body");
+            var hello = body.querySelector("#hi");
+
+            var count = 0;
+
+            hello.onclick = function () {
+                alert("안녕하세요");
+                // 버튼과 연결해준것
+            }
+
+            // 숫자 증감
+            hello.onclick = function() {
+                count++;
+                console.log(count);
+            }
+
+        });
+    </script>
+</head>
+
+<body id="body">
+    <button id="hi">버튼</button>
+</body>
+
+</html>
+
+<!-- 
+1번 문제
+1. 버튼만든다
+2. 윈도우 함수 복붙
+3. 쿼리 셀렉터 id랑 연결
+4. 함수나 구현할거 생각 -->

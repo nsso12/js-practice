@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // concat()
+        var arr = ['a', 'b', 'c'];
+        var nums = [1, 2, 3];
+        console.log(arr.concat(nums));          // ['a', 'b', 'c', 1, 2, 3]
+
+        var newArr = arr.concat(nums);          // ['a', 'b', 'c', 1, 2, 3]
+        console.log(newArr);
+
+        console.log("==========================================");
+
+        // fill()
+        var arr = [1, 1, 1, 1, 1, 1, 1, 1];
+        var arr2 = arr.fill(8, 2, 7);         //  [1, 1, 8, 8, 8, 8, 8, 1]
+        // 첫번째는 바뀔 숫자, 두번째는 바꿀 위치, 세번째는 끝나는 시점 바로 전
+        console.log(arr2);
+
+        console.log("==========================================");
+
+        // toString()
+        var arr = [1, 1, 1, 1];
+        arr.toString();
+        console.log(typeof arr.toString());
+        console.log(arr.toString());
+
+        console.log("==========================================");
+
+        // join()
+        var cars = ["Ferrari", "Aston Martain", "Porsche", "KIA"];
+        cars.join('-');   // -  => 붙여준다는 의미
+        console.log(cars.join(' & '));
+
+
+        console.log("==========================================");
+
+        // sort() 오름차순
+        var cars = ["Ferrari", "Aston Martain", "Porsche", "KIA"];
+        var cars2 = cars.sort();
+        console.log("얍: ", cars);
+
+
+        // 0719 sort
+        var arr = [
+            { name: 'Edward', age: 21, grade: 2 },
+            { name: 'Sharpe', age: 37, grade: 4 },
+            { name: 'And', age: 45, grade: 1 },
+            { name: 'The', age: -12, grade: 6 },
+            { name: 'Magnetic', age: 13, grade: 5 },
+            { name: 'Zeros', age: 37, grade: 1 }
+        ];
+
+
+        console.log(arr.sort(compare));
+
+
+        function compare(a, b) {
+            return b - a;
+        }
+
+
+        function compare(a, b) {
+            return a.grade - b.grade;
+        }
+
+
+
+
+
+
+
+        var sums = [1, 80, 5, 30, 2];
+        var cars = ['Ferrari', 'McLaren', 'bugatti', 'aston martin'];
+
+
+        console.log(sums.sort(compare));
+
+        var newSums = sums.sort(compare)
+        console.log(sums.reverse());
+
+
+        console.log(cars.sort());
+        var newSums = cars.sort(compare);  // 정렬한다
+        console.log(cars.sort(compare));
+
+
+
+        function compare(a, b) {
+            return a - b;
+        }
+
+        function compare(a, b) {
+            return b - a;
+        }
+
+        // reverse() 내림차순
+        var cars3 = cars.reverse();
+        console.log("얍얍: ", cars);
+
+        console.log("==========================================");
+
+        // object
+        var target = { a: 1, b: 2 };
+        var source = { d: 4, c: 5 };
+
+        console.log(Object.assign(target, source));
+        // 기존 객체를 변경
+        console.log(target);
+
+
+        console.log("================= 0719 ==================");
+
+        // 함수 선언 시 
+        // new Function()     => 잘 안 씀
+
+        //함수 표현식
+        var aa = function () {
+            console.log("aa:", "aa");
+        };
+
+        test();
+        aa();
+
+        //명시적 함수
+        function test() {
+            console.log("test:", "test");
+
+        }
+
+        // 값을 대입해서 호출할때는 test() 앞에 
+        // 해당 대입함수를 적어줘야 한다는 걸까?
+
+
+        console.log("==========================================");
+
+        var cars = ['Ferrari', 'McLaren', 'bugatti', 'aston martin'];
+
+        //  printCars(cars[0], cars[1]);
+        printCars(cars[0]);
+        // printCars(cars[0], cars[1], cars[2], cars[3]);
+
+
+        function printCars(x, y) {
+            // console.log(x + ", " + y);
+
+            for (var item of arguments)
+                console.log(item);
+        }
+
+        console.log("==========================================");
+
+        // js에서는 매개변수가 큰 걸 실행함
+        // 고로 마지막 (x,y,z) 를 가지고 있는 메서드가 실행되어
+        // 1, undefined, undefined가 실행됨 
+
+        printStr(1);
+
+
+        function printStr(x) {
+
+            console.log(x);
+
+        }
+
+        function printStr(x, y) {
+
+            console.log(x + "," + y);
+
+        }
+
+        function printStr(x, y, z) {
+
+            console.log(x + "," + y + "," + z);
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

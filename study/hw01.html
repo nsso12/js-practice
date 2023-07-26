@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+
+        // 벨루가 퀴즈
+        console.log("2" + "2" - "2");
+
+        // "2" + "2" = "22"
+        // "22" - "2": 자"22"(문자열22("2"(문2(숫자)로 변환 
+        // 문자열 - 문자열 = 숫자
+        // 더하기는 문자열 우선  빼기는 숫자열 우선 
+        // 22 - 2: 20이 나옴
+
+
+        // 코니쌤 퀴즈 
+        // 1 에서 정의한 함수에 대해 설명해보기
+        // 2, 3 에 대한 결과값 예측해보기
+
+        //1
+        function closure() {
+            var count = 0;
+
+            return {
+                getNum: function () {
+                    return count;
+                },
+                increaseNum: function () {
+                    count++;
+                },
+            };
+        }
+
+        var obj = closure(); 
+        //closure()를 넣었다는건 리턴값을 넣은거다
+        //js에서 함수는 객체로 취급되기 때문!
+        //클로저함수는~ getNum과 increaseNum의 클로저이다
+        //   console.log(obj);
+
+        // 2
+        console.log(obj.getNum()); //0
+        obj.increaseNum();
+        obj.increaseNum();
+        obj.increaseNum();
+        console.log(obj.getNum()); //3
+        var obj = closure;
+        console.log(obj.count); //undefined. 함수에 있는 성분을 못뽑는다
+        console.log(closure.count); //undefined
+
+        obj = null;
+
+        // 3
+        obj = closure();//클로저 함수의 리턴을 넣음
+        obj.increaseNum();
+        console.log(obj.getNum()); //1
+
+        console.log("여기부터");
+        var obj = closure;//클로저 함수 자체를 넣음
+        console.log(obj().getNum()); //0
+        console.log("여기까지");
+    </script>
+</head>
+
+<body></body>
+
+</html>

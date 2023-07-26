@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        {
+            var names = [, "철수", "영희", "맹구", , "동천"];
+            for (var i = 0; i < names.length; i++)
+                console.log(names[i]);              // 철수, 영희, 맹구, 동천
+            console.log("===============================");
+
+            for (var i in names)
+                console.log(names[i]);              // 철수, 영희, 맹구, 동천
+            console.log("===============================");
+
+
+            for (var name of names)
+                console.log(name);                  // 철수, 영희, 맹구, 동천
+
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

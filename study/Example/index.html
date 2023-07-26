@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 맞추기</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+            var section = document.querySelector(".newlecture");
+            var resetBtn = section.querySelector("#btn-reset");
+            var findBtn = section.querySelector("#btn-find");
+            var textInput = section.querySelector("#text-input");
+            var countInput = section.querySelector("#count");
+            var hiddenInput = section.querySelector("input[type='hidden']");
+            var output = section.querySelector("output");
+
+            //반복 횟수 정하기
+            var count = 0;
+
+
+            findBtn.onclick = function () {
+
+                //받은 값
+                var number_ = textInput.value;
+                var number = parseInt(number_);
+
+                var compare_ = hiddenInput.value;
+                var compare = parseInt(compare_);
+
+                if (number > compare) {
+                    output.value = "입력값이 큽니다!";
+                } else if (number < compare) {
+                    output.value = "입력값이 작습니다!";
+                }
+                count++;
+
+                countInput.value = count;
+            }
+
+            resetBtn.onclick = function () {
+                var number_ = Math.random() * 100;
+                var number = parseInt(number_);
+
+                hiddenInput.value = number;
+
+                count = 0;
+                countInput.value = 0;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    <section class="newlecture">
+        <h1>숫자 맞추기</h1>
+        <div class="d-grid-custom">
+            <label for="">숫자 입력</label>
+            <input type="hidden">
+            <input id="text-input" type="text" class="btn inner text-dark" placeholder="숫자를 입력하세요">
+            <output class="grid-item text-default">결과가 이곳에 나옵니다!</output>
+        </div>
+        <div class="d-flex-custom">
+            <label for="">반복 횟수</label>
+            <input id="count" type="text" class="btn inner text-dark" value="0" disabled>
+        </div>
+        <div class="d-flex-custom">
+            <button id="btn-reset" class="btn outer text-default">숫자 지정</button>
+            <button id="btn-find" class="btn outer text-default">찾기</button>
+        </div>
+    </section>
+
+</body>
+
+</html>

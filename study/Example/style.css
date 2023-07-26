@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.newlecture{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1F0F5;
+
+    padding: 12px 0;
+
+    gap: 24px;
+}
+
+.newlecture h1,
+.newlecture h2,
+.newlecture h3 {
+    width: 100%;
+
+    color: #1E293B;
+    font-weight: 700;
+    text-align: center;
+
+    border-bottom: 1px solid #1E293B;
+
+    padding: 4px;
+}
+
+.newlecture label {
+    font-size: small;
+    text-align: center;
+}
+
+.newlecture input:disabled {
+    cursor: default;
+}
+
+.newlecture .d-flex-custom {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.newlecture .text-default {
+    color: #1E293B;
+}
+
+.newlecture .text-dark {
+    color: #111;
+}
+
+.newlecture .btn {
+display: inline-block;
+
+max-width: 150px;
+height: 40px;
+padding: 10px 25px;
+
+border: 0;
+border-radius: .5rem;
+box-sizing: border-box;
+
+font-family: 'Noto Sans KR', sans-serif;
+font-weight: 500;
+text-overflow: ellipsis;
+/* text-align: center; */
+
+overflow: hidden;
+
+background: transparent;
+
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.newlecture .outer {
+    transition: all 0.3s ease;
+    box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+    }
+    
+.newlecture .outer:hover,
+.newlecture .inner{
+    background-color: #F1F0F5;
+    box-shadow:
+    inset  -7px -7px 20px 0px #fff9,
+    inset -4px -4px 5px 0px #fff9,
+    inset 7px 7px 20px 0px #0002,
+    inset 4px 4px 5px 0px #0001;
+
+}
+
+.newlecture .d-grid-custom {
+    display: grid;
+    /* grid-template-rows: 100px; */
+    grid-template-columns: 60px 150px;
+    align-items: center;
+    justify-content: center;
+
+    row-gap: 8px;
+    column-gap: 12px;
+}
+
+.newlecture .grid-item{
+    grid-column: 1 / 3 ;
+    text-align: center;
+}
